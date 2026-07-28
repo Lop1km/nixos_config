@@ -125,7 +125,7 @@
         "type": "github"
       }
     },
-    "halium-flake": {
+    "helium-flake": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -285,7 +285,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
-        "halium-flake": "halium-flake",
+        "helium-flake": "helium-flake",
         "home-manager": "home-manager_2",
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs",

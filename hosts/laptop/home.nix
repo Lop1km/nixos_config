@@ -8,4 +8,5 @@
     homeDirectory = "/home/lop1k";
     stateVersion = "25.11";
   };
+  xdg.autostart.enable = true;
 }

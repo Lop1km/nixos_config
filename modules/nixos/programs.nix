@@ -14,7 +14,7 @@
       ];
       gamescopeSession.enable = true;
       localNetworkGameTransfers.openFirewall = true;
-      platformOptimizations.enable = true;
+    #  platformOptimizations.enable = true;
       remotePlay.openFirewall = true;
     };
     xwayland.enable = true;
