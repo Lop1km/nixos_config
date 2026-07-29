@@ -5,5 +5,6 @@
     ./hypr.nix
     ./noctalia.nix
     ./home-packages.nix
+    ./zsh.nix
   ];
 }
