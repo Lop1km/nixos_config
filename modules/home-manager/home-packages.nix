@@ -20,8 +20,7 @@
     p7zip
     lsd
     ripgrep
-    gh
-    degit
+    comma
 
     # xdg
     xdg-desktop-portal-gtk
