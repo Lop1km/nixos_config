@@ -1,10 +1,18 @@
+let
+  mainMod = "SUPER";
+  secondMod = "SHIFT";
+  appMod = "ALT";
+
+  terminalEmulator = "foot";
+  mainBrowser = "helium";
+in
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mod shift, Q, exec, foot"
+      "${mainMod} ${secondMod}, Q, exec, ${terminalEmulator}"
 
-      "alt, space, exec, pkill -x wmenu-run || wmenu-run"
-      "$mod alt, H, exec, helium"
+      "${appMod}, space, exec, pkill -x wmenu-run || wmenu-run"
+      "${mainMod} ${appMod}, H, exec, ${mainBrowser}"
     ];
     exec-once = [
       "waybar"

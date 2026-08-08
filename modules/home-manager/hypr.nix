@@ -1,3 +1,11 @@
+let
+  mainMod = "SUPER";
+  secondMod = "SHIFT";
+  appMod = "ALT";
+  fileManager = "pcmanfm-qt";
+  discord = "vesktop";
+  telegram = "materialgram";
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -8,65 +16,63 @@
         #      "col.shadow" = "rgba(00000099)";
       };
 
-      "$mod" = "SUPER";
-
       bind = [
 
         # BASE
-        "$mod shift, F, fullscreen, toggle"
-        "$mod shift, C, killactive"
-        "$mod shift, M, exit"
-        "$mod shift, E, exec, pcmanfm-qt"
-        "$mod shift, V, togglefloating"
+        "${mainMod} ${secondMod}, F, fullscreen, toggle"
+        "${mainMod} ${secondMod}, C, killactive"
+        "${mainMod} ${secondMod}, M, exit"
+        "${mainMod} ${secondMod}, E, exec, ${fileManager}"
+        "${mainMod} ${secondMod}, V, togglefloating"
 
         # MOVE
-        "$mod, H, movefocus, l"
-        "$mod, L, movefocus, r"
-        "$mod, K, movefocus, u"
-        "$mod, J, movefocus, d"
+        "${mainMod}, H, movefocus, l"
+        "${mainMod}, L, movefocus, r"
+        "${mainMod}, K, movefocus, u"
+        "${mainMod}, J, movefocus, d"
 
         # SPACE
-        "$mod, 1, workspace, 1"
-        "$mod, 2, workspace, 2"
-        "$mod, 3, workspace, 3"
-        "$mod, 4, workspace, 4"
-        "$mod, 5, workspace, 5"
-        "$mod, 6, workspace, 6"
-        "$mod, 7, workspace, 7"
-        "$mod, 8, workspace, 8"
-        "$mod, 9, workspace, 9"
-        "$mod, 0, workspace, 10"
+        "${mainMod}, 1, workspace, 1"
+        "${mainMod}, 2, workspace, 2"
+        "${mainMod}, 3, workspace, 3"
+        "${mainMod}, 4, workspace, 4"
+        "${mainMod}, 5, workspace, 5"
+        "${mainMod}, 6, workspace, 6"
+        "${mainMod}, 7, workspace, 7"
+        "${mainMod}, 8, workspace, 8"
+        "${mainMod}, 9, workspace, 9"
+        "${mainMod}, 0, workspace, 10"
 
         # MOVE TO SPACE
-        "$mod shift, 1, movetoworkspace, 1"
-        "$mod shift, 2, movetoworkspace, 2"
-        "$mod shift, 3, movetoworkspace, 3"
-        "$mod shift, 4, movetoworkspace, 4"
-        "$mod shift, 5, movetoworkspace, 5"
-        "$mod shift, 6, movetoworkspace, 6"
-        "$mod shift, 7, movetoworkspace, 7"
-        "$mod shift, 8, movetoworkspace, 8"
-        "$mod shift, 9, movetoworkspace, 9"
-        "$mod shift, 0, movetoworkspace, 10"
+        "${mainMod} ${secondMod}, 1, movetoworkspace, 1"
+        "${mainMod} ${secondMod}, 2, movetoworkspace, 2"
+        "${mainMod} ${secondMod}, 3, movetoworkspace, 3"
+        "${mainMod} ${secondMod}, 4, movetoworkspace, 4"
+        "${mainMod} ${secondMod}, 5, movetoworkspace, 5"
+        "${mainMod} ${secondMod}, 6, movetoworkspace, 6"
+        "${mainMod} ${secondMod}, 7, movetoworkspace, 7"
+        "${mainMod} ${secondMod}, 8, movetoworkspace, 8"
+        "${mainMod} ${secondMod}, 9, movetoworkspace, 9"
+        "${mainMod} ${secondMod}, 0, movetoworkspace, 10"
 
         # SPECIAL SPACE
-        "$mod, S, togglespecialworkspace, magic"
-        "$mod shift, S, movetoworkspace, special:magic"
+        "${mainMod}, S, togglespecialworkspace, magic"
+        "${mainMod} ${secondMod}, S, movetoworkspace, special:magic"
 
         # SCROLL
-        "$mod, mouse_down, workspace, e+1"
-        "$mod, mouse_up, workspace, e-1"
+        "${mainMod}, mouse_down, workspace, e+1"
+        "${mainMod}, mouse_up, workspace, e-1"
 
         # APPS
-        "$mod alt, D, exec, vesktop"
-        "$mod alt, T, exec, materialgram"
-        "$mod alt, G, exec, steam"
-        "$mod shift, Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
+        "${mainMod} ${appMod}, D, exec, ${discord}"
+        "${mainMod} ${appMod}, T, exec, ${telegram}"
+        "${mainMod} ${appMod}, G, exec, steam"
+        "${mainMod} ${secondMod}, Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
       ];
 
       bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
+        "${mainMod}, mouse:272, movewindow"
+        "${mainMod}, mouse:273, resizewindow"
       ];
 
       input = {
@@ -74,6 +80,7 @@
         kb_options = "grp:win_space_toggle";
       };
     };
+    # configType = "lua";
     configType = "hyprlang";
   };
 }

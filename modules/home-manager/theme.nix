@@ -8,8 +8,11 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Gruvbox-Dark-B";
-      package = pkgs.gruvbox-gtk-theme;
+      name = "Colloid-Dark-Gruvbox";
+      package = pkgs.colloid-gtk-theme.override {
+        tweaks = [ "gruvbox" ];
+        colorVariants = [ "dark" ];
+      };
     };
     iconTheme = {
       name = "Gruvbox-Plus-Dark";

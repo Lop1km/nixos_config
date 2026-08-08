@@ -57,9 +57,6 @@
     prismlauncher
     mangohud
 
-    # gruvbox
-    gruvbox-plus-icons
-    gruvbox-gtk-theme
     gruvbox-kvantum
 
     # another
