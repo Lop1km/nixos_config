@@ -2,7 +2,6 @@
 {
   home.packages = with pkgs; [
     # Terminal
-    helix
     w3m
     fastfetch
     cpufetch
@@ -38,7 +37,6 @@
     # GUI
     vesktop
     materialgram
-    vlc
     slurp
     grim
     pcmanfm-qt

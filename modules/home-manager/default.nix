@@ -6,6 +6,7 @@
     ./home-packages.nix
     ./hypr.nix
     ./keepassxc.nix
+    ./mpv.nix
     ./nixvim.nix
     ./nh.nix
     ./theme.nix
