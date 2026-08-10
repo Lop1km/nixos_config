@@ -8,7 +8,6 @@
     cpufetch
     (gpufetch.override { cudaSupport = true; })
     libqalculate
-    btop
     dysk
     lazygit
     zip

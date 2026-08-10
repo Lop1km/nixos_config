@@ -1,6 +1,7 @@
 {
   imports = [
     ./bash.nix
+    ./btop.nix
     ./git.nix
     ./home-packages.nix
     ./hypr.nix
