@@ -17,7 +17,6 @@
     fd
     p7zip
     lsd
-    ripgrep
     comma
 
     # xdg

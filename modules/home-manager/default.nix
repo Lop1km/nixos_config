@@ -9,10 +9,11 @@
     ./mpv.nix
     ./nixvim.nix
     ./nh.nix
-    ./theme.nix
-    ./tmux.nix
+    ./ripgrep.nix
     ./starship.nix
     ./syncthing.nix
+    ./theme.nix
+    ./tmux.nix
     ./zoxide.nix
     ./zsh.nix
   ];
