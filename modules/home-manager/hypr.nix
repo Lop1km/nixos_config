@@ -67,7 +67,7 @@ in
         "${mainMod} ${appMod}, D, exec, ${discord}"
         "${mainMod} ${appMod}, T, exec, ${telegram}"
         "${mainMod} ${appMod}, G, exec, steam"
-        "${mainMod} ${secondMod}, Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
+        "${mainMod}, Print, exec, grim -g \"$(slurp)\" - | swappy -f -"
       ];
 
       bindm = [

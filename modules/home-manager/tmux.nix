@@ -41,6 +41,8 @@
       bind -n M-c kill-pane
       bind -n M-q kill-window
       bind -n M-Q kill-session
+      bind -T copy-mode-vi WheelUpPane send-keys -X -N 9 scroll-up
+      bind -T copy-mode-vi WheelDownPane send-keys -X -N 9 scroll-down
     '';
     plugins = with pkgs; [
       tmuxPlugins.gruvbox

@@ -11,22 +11,6 @@
     inputs.nix-gaming.nixosModules.platformOptimizations
   ];
 
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    backupFileExtension = "backup";
-    users = {
-      lop1k = import ./home.nix;
-      root = {
-        imports = [
-          ../../modules/home-manager/nixvim.nix
-          ../../modules/home-manager/bash.nix
-        ];
-        home.stateVersion = "25.11";
-      };
-    };
-  };
-
   boot = {
     loader = {
       systemd-boot.enable = true;

@@ -20,6 +20,9 @@
         read_only = " 🔒";
         truncation_symbol = "…/";
       };
+      battery = {
+        disabled = true;
+      };
     };
   };
 }

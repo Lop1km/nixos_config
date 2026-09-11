@@ -2,13 +2,16 @@
   imports = [
     ./bash.nix
     ./btop.nix
+    ./fzf.nix
     ./git.nix
     ./home-packages.nix
     ./hypr.nix
+    ./imv.nix
     ./keepassxc.nix
+    ./mime.nix
     ./mpv.nix
-    ./nixvim.nix
     ./nh.nix
+    ./nixvim.nix
     ./ripgrep.nix
     ./starship.nix
     ./syncthing.nix

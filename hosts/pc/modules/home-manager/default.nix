@@ -2,9 +2,10 @@
   imports = [
     ./alacritty.nix
     ./firefox.nix
-    ./hypr.nix
-    ./noctalia.nix
     ./home-packages.nix
+    ./hypr.nix
+    ./mime.nix
+    ./noctalia.nix
     ./zsh.nix
   ];
 }

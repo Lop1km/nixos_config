@@ -11,38 +11,44 @@
       #      lazyLoad.settings.event = "DeferredUIEnter";
 
       lintersByFt = {
-        sh = [ "shellcheck" ];
         bash = [ "shellcheck" ];
-        zsh = [ "shellcheck" ];
+        c = [ "clangtidy" ];
+        cpp = [ "clangtidy" ];
+        # haskell = [ "hlint" ];
+        kotlin = [ "detekt" ];
+        lua = [ "selene" ];
+        markdown = [ "markdownlint" ];
+        # nim = [ "nimpretty" ];
         nix = [
           "nix"
           "deadnix"
         ]
         ++ lib.optionals (!config.programs.nixvim.lsp.servers.statix.enable) [ "statix" ];
-        c = [ "clangtidy" ];
-        cpp = [ "clangtidy" ];
-        haskell = [ "hlint" ];
         python = [ "ruff" ];
-        markdown = [ "markdownlint" ];
         rust = [ "clippy" ];
-        nim = [ "nimpretty" ];
+        sh = [ "shellcheck" ];
+        zsh = [ "shellcheck" ];
+        zig = [ "zls" ];
       };
 
       linters = {
-        shellcheck = {
-          cmd = lib.getExe pkgs.shellcheck;
+        clippy = {
+          cmd = lib.getExe pkgs.clippy;
         };
         deadnix = {
           cmd = lib.getExe pkgs.deadnix;
         };
+        #golangcilint = {
+        #cmd = lib.getExe pkgs.golangci-lint;
+        #};
+        selene = {
+          cmd = lib.getExe pkgs.selene;
+        };
+        shellcheck = {
+          cmd = lib.getExe pkgs.shellcheck;
+        };
         statix = {
           cmd = lib.getExe pkgs.statix;
-        };
-        golangcilint = {
-          cmd = lib.getExe pkgs.golangci-lint;
-        };
-        clippy = {
-          cmd = lib.getExe pkgs.clippy;
         };
       };
     };

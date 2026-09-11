@@ -9,6 +9,8 @@
       clang-tools
       rustfmt
       nph
+      stylua
+      ktfmt
     ];
     plugins.conform-nvim = {
       enable = true;
@@ -20,11 +22,16 @@
         notify_on_error = true;
 
         formatters_by_ft = {
-          nix = [ "nixfmt" ];
           c = [ "clang-format" ];
-          rust = [ "rustfmt" ];
+          cpp = [ "clang-format" ];
+          kotlin = [ "ktfmt" ];
+          lua = [ "stylua" ];
           markdown = [ "prettier" ];
-          nim = [ "nph" ];
+          # nim = [ "nph" ];
+          nix = [ "nixfmt" ];
+          rust = [ "rustfmt" ];
+          sh = [ "shfmt" ];
+          zig = [ "zigfmt" ];
         };
         formatters = {
           clang-format = {

@@ -50,7 +50,16 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.lop1k = import ./hosts/pc/home.nix;
+                users = {
+                  lop1k = import ./hosts/pc/home.nix;
+                  root = {
+                    imports = [
+                      ./modules/home-manager/nixvim.nix
+                      ./modules/home-manager/bash.nix
+                    ];
+                    home.stateVersion = "25.11";
+                  };
+                };
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
               };
@@ -68,7 +77,16 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.lop1k = import ./hosts/laptop/home.nix;
+                users = {
+                  lop1k = import ./hosts/laptop/home.nix;
+                  root = {
+                    imports = [
+                      ./modules/home-manager/nixvim.nix
+                      ./modules/home-manager/bash.nix
+                    ];
+                    home.stateVersion = "25.11";
+                  };
+                };
                 backupFileExtension = "backup";
                 extraSpecialArgs = { inherit inputs; };
               };

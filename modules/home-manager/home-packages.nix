@@ -2,63 +2,60 @@
 {
   home.packages = with pkgs; [
     # Terminal
-    w3m
-    fastfetch
-    cpufetch
-    (gpufetch.override { cudaSupport = true; })
-    libqalculate
-    dysk
-    lazygit
-    zip
-    unzip
-    ffmpeg
-    wget
-    openssl
-    fd
-    p7zip
-    lsd
     comma
-
-    # xdg
-    xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
+    cpufetch
+    dysk
+    fastfetch
+    fd
+    ffmpeg
+    (gpufetch.override { cudaSupport = true; })
+    lazygit
+    libqalculate
+    lsd
+    openssl
+    p7zip
+    tealdeer
+    unzip
+    w3m
+    wget
+    zip
 
     # font
     nerd-fonts.jetbrains-mono
 
     # notify
-    libnotify
     dunst
+    libnotify
 
     # clipboard
     wl-clipboard
 
     # GUI
-    vesktop
-    materialgram
-    slurp
-    grim
-    pcmanfm-qt
-    localsend
-    (obs-studio.override { cudaSupport = true; })
-    krita
-    blockbench
-    swappy
     # (blender.override { cudaSupport = true; })
+    (obs-studio.override { cudaSupport = true; })
+    blockbench
+    grim
+    krita
     lagrange
+    localsend
+    materialgram
+    pcmanfm-qt
+    slurp
+    swappy
     tenacity
+    vesktop
 
     # games
-    prismlauncher
     mangohud
+    prismlauncher
 
     gruvbox-kvantum
 
     # another
-    libsForQt5.qt5ct
-    libsForQt5.qtstyleplugin-kvantum
     f3d
     ffmpegthumbnailer
     librsvg
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
   ];
 }
