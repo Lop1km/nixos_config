@@ -27,14 +27,7 @@
     networkmanager.enable = true;
   };
 
-  nix = {
-    settings = {
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-    };
-  };
+  nix.package = pkgs.lixPackageSets.stable.lix;
 
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "uk_UA.UTF-8";

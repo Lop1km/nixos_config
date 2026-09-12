@@ -5,6 +5,7 @@
     ./dysk-set.nix
     ./gc.nix
     ./nano.nix
+    ./nix-experimental.nix
     ./pipewire.nix
     ./programs.nix
     ./searxng.nix
